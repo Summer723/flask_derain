@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+
+        <!-- Select model dropdown -->
+        <label for="modelSelect">Select Model:</label>
+        <select name="model" id="modelSelect">
+            <option value="attentive_gan">Attentive GAN</option>
+            <option value="mpr_net">MPR Net</option>
+            <option value="derain_net">Derain Net</option>
+            <option value="ipt">Image Processing Transformer</option>
+            <!-- Add more options for different models -->
+        </select>
+
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
